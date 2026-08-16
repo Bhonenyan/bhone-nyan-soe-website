@@ -334,20 +334,15 @@ strong {
 
 .hero__avatar-wrapper {
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 4 / 5;
   border-radius: 12px;
   overflow: hidden;
-  border: 2px solid var(--border);
-  background: var(--white);
-  margin: 0 auto;
-  box-shadow: 0 20px 60px rgba(26, 26, 26, 0.06);
 }
 
 .hero__avatar {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 /* --- STATS --- */
@@ -866,10 +861,6 @@ strong {
     order: -1;
   }
 
-  .hero__avatar-wrapper {
-    max-width: 320px;
-  }
-
   .hero__buttons {
     justify-content: center;
   }
@@ -931,10 +922,6 @@ strong {
 
   .hero__name {
     font-size: 36px;
-  }
-
-  .hero__avatar-wrapper {
-    max-width: 260px;
   }
 
   .hero__buttons {
