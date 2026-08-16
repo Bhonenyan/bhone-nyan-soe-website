@@ -1,0 +1,19 @@
+{
+  "name": "Bhone Nyan Soe",
+  "short_name": "BNS",
+  "icons": [
+    {
+      "src": "/assets/favicon/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1A1A1A",
+  "background_color": "#FAFAF8",
+  "display": "standalone"
+}
