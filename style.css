@@ -644,48 +644,6 @@ strong {
   color: var(--text-primary);
 }
 
-/* --- CLIENTS --- */
-.clients {
-  padding: var(--section-padding) var(--container-padding);
-  background: var(--bg);
-}
-
-.clients__inner {
-  max-width: var(--container);
-  margin: 0 auto;
-}
-
-.clients__header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.clients__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.client-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 28px 40px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--white);
-  min-width: 220px;
-}
-
-.client-card__logo {
-  max-width: 200px;
-  max-height: 120px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
 /* --- TESTIMONIALS --- */
 .testimonials {
   padding: var(--section-padding) var(--container-padding);
