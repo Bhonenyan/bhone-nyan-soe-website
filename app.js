@@ -67,8 +67,6 @@
 
   staggerContainers.forEach((el) => staggerObserver.observe(el));
 
-  const nav = document.getElementById('nav');
-
   // --- Mobile nav toggle ---
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
@@ -97,12 +95,11 @@
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        const navHeight = nav ? nav.offsetHeight : 72;
 
         if (lenis) {
-          lenis.scrollTo(target, { offset: -navHeight, duration: 1.6 });
+          lenis.scrollTo(target, { duration: 1.6 });
         } else {
-          const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
+          const targetPos = target.getBoundingClientRect().top + window.scrollY;
           window.scrollTo({ top: targetPos, behavior: 'smooth' });
         }
       }
