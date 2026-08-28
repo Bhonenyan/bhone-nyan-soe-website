@@ -27,9 +27,7 @@
   revealElements.forEach((el) => revealObserver.observe(el));
 
   // --- Staggered reveal for grid children ---
-  const staggerContainers = document.querySelectorAll(
-    '.ventures__grid, .services__grid, .testimonials__grid'
-  );
+  const staggerContainers = document.querySelectorAll('.ventures__grid');
 
   const staggerObserver = new IntersectionObserver(
     (entries) => {
@@ -129,6 +127,44 @@
     );
 
     statsObserver.observe(statsSection);
+  }
+
+  // --- Contact form ---
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const statusEl = document.getElementById('contactStatus');
+    const submitBtn = contactForm.querySelector('.contact__submit');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Honeypot — if filled, silently drop (likely a bot)
+      const honey = contactForm.elements['_honey'];
+      if (honey && honey.value) return;
+
+      submitBtn.disabled = true;
+      statusEl.textContent = 'Sending…';
+      statusEl.className = 'contact__status';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(contactForm),
+        });
+
+        if (!response.ok) throw new Error('Submission failed');
+
+        statusEl.textContent = "Thanks — I'll get back to you soon.";
+        statusEl.className = 'contact__status contact__status--success';
+        contactForm.reset();
+      } catch (err) {
+        statusEl.textContent = 'Something went wrong. Please try again or email me directly.';
+        statusEl.className = 'contact__status contact__status--error';
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
   }
 
   function animateNumber(el, start, end, duration, suffix) {
