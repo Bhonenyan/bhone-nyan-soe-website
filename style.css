@@ -284,7 +284,7 @@ strong {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
   background: var(--bg);
 }
@@ -321,7 +321,7 @@ strong {
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 140px var(--container-padding) 100px;
+  padding: 0 var(--container-padding);
   text-align: center;
 }
 
@@ -343,26 +343,7 @@ strong {
   line-height: 1;
   color: #fff;
   letter-spacing: -0.01em;
-  margin-bottom: 24px;
   text-shadow: 0 4px 40px rgba(0, 0, 0, 0.35);
-}
-
-.hero__tagline {
-  font-family: var(--font-serif);
-  font-size: clamp(16px, 2vw, 20px);
-  font-style: italic;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.92);
-  line-height: 1.5;
-  max-width: 520px;
-  margin: 0 auto 32px;
-}
-
-.hero__buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
 }
 
 /* --- ABOUT --- */
@@ -766,19 +747,6 @@ strong {
     --container-padding: 20px;
   }
 
-  .hero__content {
-    padding-top: 110px;
-  }
-
-  .hero__buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero__buttons .btn {
-    width: 100%;
-    justify-content: center;
-  }
 
   .venture-card {
     padding: 28px 24px;
