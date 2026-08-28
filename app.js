@@ -6,6 +6,26 @@
 (function () {
   'use strict';
 
+  // --- Slow, eased scrolling (Lenis) ---
+  let lenis = null;
+  if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({
+      duration: 1.6,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
+      smoothWheel: true,
+      syncTouch: true,
+      smoothTouch: true,
+      touchMultiplier: 1.1,
+      wheelMultiplier: 0.85,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
   // --- Scroll Reveal via IntersectionObserver ---
   const revealElements = document.querySelectorAll('.reveal');
 
@@ -78,8 +98,13 @@
       if (target) {
         e.preventDefault();
         const navHeight = nav ? nav.offsetHeight : 72;
-        const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
-        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+
+        if (lenis) {
+          lenis.scrollTo(target, { offset: -navHeight, duration: 1.6 });
+        } else {
+          const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
+          window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        }
       }
     });
   });
