@@ -5,13 +5,13 @@
 
 /* --- Custom Properties --- */
 :root {
-  --bg: #FAFAF8;
-  --bg-alt: #F0F0EE;
-  --text-primary: #1A1A1A;
-  --text-secondary: #6B6B6B;
-  --accent: #1A1A1A;
-  --border: #E5E5E3;
-  --white: #FFFFFF;
+  --bg: #0D0D0D;
+  --bg-alt: #161616;
+  --text-primary: #F5F5F3;
+  --text-secondary: #9A9A96;
+  --accent: #F5F5F3;
+  --border: rgba(255, 255, 255, 0.12);
+  --white: #171717;
 
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -107,7 +107,7 @@ strong {
 }
 
 .nav.is-scrolled {
-  background-color: rgba(250, 250, 248, 0.85);
+  background-color: rgba(13, 13, 13, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 var(--border);
@@ -248,10 +248,10 @@ strong {
 }
 
 .btn--filled:hover {
-  background: #333;
-  border-color: #333;
+  background: #fff;
+  border-color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(26, 26, 26, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .btn--outlined {
@@ -286,7 +286,7 @@ strong {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  background: #111;
+  background: var(--bg);
 }
 
 .hero__media {
@@ -365,17 +365,6 @@ strong {
   flex-wrap: wrap;
 }
 
-.hero__buttons .btn--filled {
-  background: #fff;
-  color: #111;
-  border-color: #fff;
-}
-
-.hero__buttons .btn--filled:hover {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(255, 255, 255, 0.85);
-}
-
 /* --- ABOUT --- */
 .about {
   padding: var(--section-padding) var(--container-padding);
@@ -383,25 +372,8 @@ strong {
 }
 
 .about__inner {
-  max-width: var(--container);
+  max-width: 680px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.about__photo-wrapper {
-  border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  box-shadow: 0 20px 60px rgba(26, 26, 26, 0.08);
-}
-
-.about__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .about__desc {
@@ -475,8 +447,8 @@ strong {
 .venture-card:hover,
 .media-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(26, 26, 26, 0.08);
-  border-color: #ccc;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .venture-card__top {
@@ -690,7 +662,7 @@ strong {
 }
 
 .contact__status--error {
-  color: #b3452c;
+  color: #e2795c;
 }
 
 .contact__social {
@@ -779,17 +751,6 @@ strong {
 
   .nav__links a::after {
     display: none;
-  }
-
-  /* About */
-  .about__inner {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .about__photo-wrapper {
-    max-width: 360px;
-    margin: 0 auto;
   }
 
   /* Ventures */
