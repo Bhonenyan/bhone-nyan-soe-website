@@ -102,33 +102,6 @@
     });
   });
 
-  // --- Stats counter animation ---
-  const statsSection = document.querySelector('.stats');
-  if (statsSection) {
-    const statsObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const numbers = entry.target.querySelectorAll('.stats__number');
-            numbers.forEach((num) => {
-              const text = num.textContent;
-              const match = text.match(/(\d[\d,]*)/);
-              if (match) {
-                const target = parseInt(match[1].replace(/,/g, ''), 10);
-                const suffix = text.replace(match[1], '');
-                animateNumber(num, 0, target, 1200, suffix);
-              }
-            });
-            statsObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    statsObserver.observe(statsSection);
-  }
-
   // --- Contact form ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
@@ -167,27 +140,4 @@
     });
   }
 
-  function animateNumber(el, start, end, duration, suffix) {
-    const startTime = performance.now();
-
-    function easeOutQuart(t) {
-      return 1 - Math.pow(1 - t, 4);
-    }
-
-    function update(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easedProgress = easeOutQuart(progress);
-      const current = Math.round(start + (end - start) * easedProgress);
-
-      // Format with commas for readability
-      el.textContent = current.toLocaleString() + suffix;
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-
-    requestAnimationFrame(update);
-  }
 })();
