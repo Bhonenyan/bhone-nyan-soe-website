@@ -29,7 +29,7 @@
 <body>
 
   <!-- NAVIGATION -->
-  <nav class="nav" id="nav">
+  <nav class="nav nav--overlay" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo">BNS</a>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
@@ -47,20 +47,16 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero__inner">
-      <div class="hero__text reveal">
-        <span class="hero__label">The Lifestyle Architect</span>
-        <h1 class="hero__name">Bhone Nyan Soe</h1>
-        <div class="hero__rule"></div>
-        <p class="hero__tagline">Designing a life worth living — systems, style, and everything in between.</p>
-        <div class="hero__buttons">
-          <a href="#contact" class="btn btn--filled">Get in Touch <span class="btn__arrow">→</span></a>
-        </div>
-      </div>
-      <div class="hero__image reveal">
-        <div class="hero__avatar-wrapper">
-          <img src="./assets/hero-photo.jpg" alt="Bhone Nyan Soe writing notes" class="hero__avatar">
-        </div>
+    <div class="hero__media">
+      <img src="./assets/hero-portrait.jpg" alt="Bhone Nyan Soe" class="hero__media-img">
+      <div class="hero__media-overlay"></div>
+    </div>
+    <div class="hero__content reveal">
+      <span class="hero__label">The Lifestyle Architect</span>
+      <h1 class="hero__name">Bhone Nyan Soe</h1>
+      <p class="hero__tagline">Designing a life worth living — systems, style, and everything in between.</p>
+      <div class="hero__buttons">
+        <a href="#contact" class="btn btn--filled">Get in Touch <span class="btn__arrow">→</span></a>
       </div>
     </div>
   </section>
