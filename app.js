@@ -47,25 +47,7 @@
 
   staggerContainers.forEach((el) => staggerObserver.observe(el));
 
-  // --- Nav scroll behavior ---
   const nav = document.getElementById('nav');
-  let lastScroll = 0;
-
-  function onScroll() {
-    const scrollY = window.scrollY || window.pageYOffset;
-
-    // Add/remove scrolled class for blur background
-    if (scrollY > 40) {
-      nav.classList.add('is-scrolled');
-    } else {
-      nav.classList.remove('is-scrolled');
-    }
-
-    lastScroll = scrollY;
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // Init state
 
   // --- Mobile nav toggle ---
   const navToggle = document.getElementById('navToggle');
