@@ -477,7 +477,8 @@ strong {
   gap: 32px;
 }
 
-.venture-card {
+.venture-card,
+.media-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -485,20 +486,23 @@ strong {
   transition: all 0.4s var(--ease-out);
 }
 
-.venture-card:hover {
+.venture-card:hover,
+.media-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(26, 26, 26, 0.08);
   border-color: #ccc;
 }
 
-.venture-card__top {
+.venture-card__top,
+.media-card__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 28px;
 }
 
-.venture-card__number {
+.venture-card__number,
+.media-card__number {
   font-family: var(--font-serif);
   font-size: 14px;
   font-weight: 400;
@@ -506,11 +510,13 @@ strong {
   letter-spacing: 0.02em;
 }
 
-.venture-card__icon {
+.venture-card__icon,
+.media-card__icon {
   color: var(--text-secondary);
 }
 
-.venture-card__title {
+.venture-card__title,
+.media-card__title {
   font-family: var(--font-serif);
   font-size: 26px;
   font-weight: 600;
@@ -518,7 +524,8 @@ strong {
   color: var(--text-primary);
 }
 
-.venture-card__subtitle {
+.venture-card__subtitle,
+.media-card__subtitle {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -527,14 +534,16 @@ strong {
   margin-bottom: 16px;
 }
 
-.venture-card__desc {
+.venture-card__desc,
+.media-card__desc {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 24px;
 }
 
-.venture-card__link {
+.venture-card__link,
+.media-card__link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -544,17 +553,47 @@ strong {
   transition: gap 0.3s var(--ease-out);
 }
 
-.venture-card__link:hover {
+.venture-card__link:hover,
+.media-card__link:hover {
   gap: 10px;
 }
 
-.venture-card__link--muted {
+.venture-card__link--muted,
+.media-card__link--muted {
   color: var(--text-secondary);
   font-weight: 500;
 }
 
 .venture-card__link-arrow {
   font-size: 16px;
+}
+
+/* --- MEDIA --- */
+.media {
+  padding: var(--section-padding) var(--container-padding);
+  background: var(--bg);
+}
+
+.media__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.media__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.media__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.media-card {
+  flex: 1 1 320px;
+  max-width: 400px;
 }
 
 /* --- CONTACT / CTA --- */
@@ -821,7 +860,8 @@ strong {
     justify-content: center;
   }
 
-  .venture-card {
+  .venture-card,
+  .media-card {
     padding: 28px 24px;
   }
 
