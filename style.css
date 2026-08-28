@@ -115,9 +115,9 @@ strong {
 
 .nav__logo {
   font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   color: var(--text-primary);
   transition: opacity 0.3s;
 }
@@ -176,8 +176,9 @@ strong {
 .nav__toggle span {
   display: block;
   width: 28px;
-  height: 2px;
+  height: 1px;
   background: var(--text-primary);
+  opacity: 0.6;
   border-radius: 1px;
   position: absolute;
   left: 0;
