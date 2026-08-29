@@ -275,6 +275,12 @@ strong {
   display: block;
 }
 
+@media (min-width: 901px) {
+  .hero__media-img {
+    object-position: center 40%;
+  }
+}
+
 .hero__media-overlay {
   position: absolute;
   inset: 0;
