@@ -277,7 +277,7 @@ strong {
 
 @media (min-width: 901px) {
   .hero__media-img {
-    object-position: center 40%;
+    object-position: center 32%;
   }
 }
 
