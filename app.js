@@ -26,6 +26,29 @@
     requestAnimationFrame(raf);
   }
 
+  // --- Relative "time ago" for podcast episode dates ---
+  document.querySelectorAll('.episode-card__meta[data-published]').forEach((el) => {
+    const published = new Date(el.dataset.published);
+    const diffDays = Math.floor((Date.now() - published) / 86400000);
+
+    let text;
+    if (diffDays < 1) {
+      text = 'Today';
+    } else if (diffDays === 1) {
+      text = '1 day ago';
+    } else if (diffDays < 30) {
+      text = `${diffDays} days ago`;
+    } else if (diffDays < 365) {
+      const months = Math.round(diffDays / 30);
+      text = months === 1 ? '1 month ago' : `${months} months ago`;
+    } else {
+      const years = Math.round(diffDays / 365);
+      text = years === 1 ? '1 year ago' : `${years} years ago`;
+    }
+
+    el.textContent = text;
+  });
+
   // --- Scroll Reveal via IntersectionObserver ---
   const revealElements = document.querySelectorAll('.reveal');
 

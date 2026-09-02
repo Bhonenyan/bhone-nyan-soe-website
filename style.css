@@ -661,6 +661,20 @@ strong {
   color: var(--text-secondary);
 }
 
+.episode-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.episode-card__cta .btn__arrow {
+  font-size: 14px;
+}
+
 /* --- CONTACT / CTA --- */
 .contact {
   padding: var(--section-padding) var(--container-padding);
