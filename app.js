@@ -47,7 +47,7 @@
   revealElements.forEach((el) => revealObserver.observe(el));
 
   // --- Staggered reveal for grid children ---
-  const staggerContainers = document.querySelectorAll('.ventures__grid, .media__grid');
+  const staggerContainers = document.querySelectorAll('.ventures__grid, .media__grid, .episodes__grid');
 
   const staggerObserver = new IntersectionObserver(
     (entries) => {
