@@ -653,6 +653,9 @@ strong {
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .episode-card__meta {
