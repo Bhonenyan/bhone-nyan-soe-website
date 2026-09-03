@@ -539,15 +539,6 @@ strong {
   padding: 40px var(--container-padding) 0;
 }
 
-.podcast-hero__title {
-  font-family: var(--font-serif);
-  font-size: clamp(32px, 5vw, 44px);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-top: 12px;
-  margin-bottom: 8px;
-}
-
 .podcast-hero__tagline {
   font-family: var(--font-serif);
   font-size: 18px;
