@@ -523,25 +523,6 @@ strong {
   text-align: center;
 }
 
-.podcast-hero__top {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 140px var(--container-padding) 24px;
-  text-align: left;
-}
-
-.podcast-hero__back {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  transition: color 0.3s var(--ease-out);
-}
-
-.podcast-hero__back:hover {
-  color: var(--text-primary);
-}
-
 .podcast-hero__media {
   width: 100%;
 }
