@@ -259,6 +259,7 @@ strong {
   align-items: center;
   overflow: hidden;
   background: var(--bg);
+  isolation: isolate;
 }
 
 .hero__media {
@@ -311,6 +312,7 @@ strong {
 }
 
 .hero__name {
+  position: relative;
   font-family: var(--font-serif);
   font-size: clamp(48px, 9vw, 110px);
   font-weight: 700;
