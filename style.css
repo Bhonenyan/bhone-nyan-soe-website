@@ -365,27 +365,160 @@ strong {
 /* --- VENTURES --- */
 .ventures {
   padding: var(--section-padding) var(--container-padding);
-  background: var(--bg-alt);
+  background: #141414;
 }
 
 .ventures__inner {
-  max-width: var(--container);
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .ventures__header {
   text-align: center;
-  margin-bottom: 60px;
+  max-width: 640px;
+  margin: 0 auto 44px;
+}
+
+.ventures__heading {
+  font-family: 'Instrument Serif', var(--font-serif);
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 12px 0 16px;
+}
+
+.ventures__intro {
+  font-family: 'Inter', var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-secondary);
 }
 
 .ventures__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
-.venture-card,
+@media (max-width: 1199px) {
+  .ventures__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .ventures__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .venture-card {
+    min-height: auto;
+  }
+}
+
+.venture-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+  padding: 32px;
+  background: #191919;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+
+.venture-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.venture-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.venture-card__number {
+  font-family: 'Inter', var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.venture-card__status {
+  font-family: 'Inter', var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.venture-card__status--operating {
+  color: var(--text-primary);
+}
+
+.venture-card__title {
+  font-family: 'Instrument Serif', var(--font-serif);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.venture-card__category {
+  display: block;
+  font-family: 'Inter', var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.venture-card__desc {
+  font-family: 'Inter', var(--font-sans);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.venture-card__cta {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 24px;
+  font-family: 'Inter', var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: gap 0.25s var(--ease-out);
+}
+
+.venture-card__cta:hover {
+  gap: 10px;
+}
+
+.venture-card__cta--muted {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.venture-card__cta-arrow {
+  font-size: 15px;
+}
+
 .media-card {
+  display: block;
+  flex: 1 1 320px;
+  max-width: 420px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -393,37 +526,12 @@ strong {
   transition: all 0.4s var(--ease-out);
 }
 
-.venture-card {
-  padding: 40px;
-}
-
-.venture-card:hover,
 .media-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-.venture-card__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 28px;
-}
-
-.venture-card__number {
-  font-family: var(--font-serif);
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-secondary);
-  letter-spacing: 0.02em;
-}
-
-.venture-card__icon {
-  color: var(--text-secondary);
-}
-
-.venture-card__title,
 .media-card__title {
   font-family: var(--font-serif);
   font-size: 26px;
@@ -432,7 +540,6 @@ strong {
   color: var(--text-primary);
 }
 
-.venture-card__subtitle,
 .media-card__subtitle {
   font-size: 13px;
   font-weight: 600;
@@ -442,34 +549,10 @@ strong {
   margin-bottom: 16px;
 }
 
-.venture-card__desc,
 .media-card__desc {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
-}
-
-.venture-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-primary);
-  transition: gap 0.3s var(--ease-out);
-}
-
-.venture-card__link:hover {
-  gap: 10px;
-}
-
-.venture-card__link--muted {
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.venture-card__link-arrow {
-  font-size: 16px;
 }
 
 /* --- MEDIA --- */
@@ -493,12 +576,6 @@ strong {
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
-}
-
-.media-card {
-  display: block;
-  flex: 1 1 320px;
-  max-width: 420px;
 }
 
 .media-card__image-wrapper {
@@ -846,11 +923,6 @@ strong {
 
   .nav__links a::after {
     display: none;
-  }
-
-  /* Ventures */
-  .ventures__grid {
-    grid-template-columns: 1fr;
   }
 
   /* Episodes */
