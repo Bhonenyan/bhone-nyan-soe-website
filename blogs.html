@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>Blogs — Bhone Nyan Soe</title>
+  <meta name="description" content="Articles, ideas, and personal perspectives on business, systems, and life from Bhone Nyan Soe.">
+  <link rel="canonical" href="https://www.bhonenyansoe.com/blogs.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:title" content="Blogs — Bhone Nyan Soe">
+  <meta property="og:description" content="Articles, ideas, and personal perspectives on business, systems, and life from Bhone Nyan Soe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bhonenyansoe.com/blogs.html">
+  <meta property="og:image" content="https://www.bhonenyansoe.com/assets/bhone-photo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blogs — Bhone Nyan Soe">
+  <meta name="twitter:description" content="Articles, ideas, and personal perspectives on business, systems, and life from Bhone Nyan Soe.">
+  <meta name="twitter:image" content="https://www.bhonenyansoe.com/assets/bhone-photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="./index.html" class="nav__logo">Bhone Nyan Soe</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="./index.html#about">About</a></li>
+        <li><a href="./index.html#ventures">Ventures</a></li>
+        <li><a href="./lifestyle.html">Lifestyle</a></li>
+        <li><a href="./blogs.html">Blogs</a></li>
+        <li><a href="./index.html#media">Media</a></li>
+        <li><a href="./index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header__inner reveal">
+      <span class="section-label">Blogs</span>
+      <h1 class="page-header__heading">Writing</h1>
+      <p class="page-header__intro">Ideas, reflections, and perspectives on business, systems, and life.</p>
+    </div>
+  </section>
+
+  <!--
+    To add a new post: duplicate one <article class="blog-card"> block
+    and update the category, title, excerpt, and meta line. Once a post
+    has its own page, wrap the block in an <a href="..."> to its URL.
+  -->
+  <section class="blog-list">
+    <div class="blog-list__inner">
+      <div class="blog-list__grid">
+        <article class="blog-card reveal">
+          <span class="blog-card__category">Business &amp; Systems</span>
+          <h2 class="blog-card__title">Your First Article Title</h2>
+          <p class="blog-card__excerpt">Write a short preview of your article here. This text appears in the list to give readers a glimpse before they click through to read the full piece.</p>
+          <div class="blog-card__meta">
+            <span class="blog-card__date">Month Year</span>
+            <span class="blog-card__dot">·</span>
+            <span class="blog-card__read-time">5 min read</span>
+          </div>
+        </article>
+        <article class="blog-card reveal">
+          <span class="blog-card__category">Lifestyle &amp; Growth</span>
+          <h2 class="blog-card__title">Another Article Title</h2>
+          <p class="blog-card__excerpt">Add as many posts as you like — just duplicate this card structure, swap in the real copy, and publish.</p>
+          <div class="blog-card__meta">
+            <span class="blog-card__date">Month Year</span>
+            <span class="blog-card__dot">·</span>
+            <span class="blog-card__read-time">4 min read</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>&copy; 2026 Bhone Nyan Soe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis/dist/lenis.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
