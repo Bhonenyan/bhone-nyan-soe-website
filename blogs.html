@@ -58,33 +58,26 @@
   </section>
 
   <!--
-    To add a new post: duplicate one <article class="blog-card"> block
-    and update the category, title, excerpt, and meta line. Once a post
-    has its own page, wrap the block in an <a href="..."> to its URL.
+    To add a new post:
+    1. Copy blog/skills-are-easier-to-copy-taste-is-not.html, rename it
+       to the new post's slug, and swap in the title/meta/body.
+    2. Duplicate one <a class="blog-card"> block below, point its href
+       at the new file, and update the category, title, excerpt, and
+       meta line.
   -->
   <section class="blog-list">
     <div class="blog-list__inner">
       <div class="blog-list__grid">
-        <article class="blog-card reveal">
-          <span class="blog-card__category">Business &amp; Systems</span>
-          <h2 class="blog-card__title">Your First Article Title</h2>
-          <p class="blog-card__excerpt">Write a short preview of your article here. This text appears in the list to give readers a glimpse before they click through to read the full piece.</p>
+        <a href="./blog/skills-are-easier-to-copy-taste-is-not.html" class="blog-card reveal">
+          <span class="blog-card__category">Ideas &amp; Perspectives</span>
+          <h2 class="blog-card__title">In the Age of AI, Skills Are Easier to Copy. Taste Is Not.</h2>
+          <p class="blog-card__excerpt">When everyone has access to the same tools, what makes one person's work different from another's? For me, the answer is increasingly clear — taste.</p>
           <div class="blog-card__meta">
-            <span class="blog-card__date">Month Year</span>
+            <span class="blog-card__date">August 28, 2026</span>
             <span class="blog-card__dot">·</span>
-            <span class="blog-card__read-time">5 min read</span>
+            <span class="blog-card__read-time">7 min read</span>
           </div>
-        </article>
-        <article class="blog-card reveal">
-          <span class="blog-card__category">Lifestyle &amp; Growth</span>
-          <h2 class="blog-card__title">Another Article Title</h2>
-          <p class="blog-card__excerpt">Add as many posts as you like — just duplicate this card structure, swap in the real copy, and publish.</p>
-          <div class="blog-card__meta">
-            <span class="blog-card__date">Month Year</span>
-            <span class="blog-card__dot">·</span>
-            <span class="blog-card__read-time">4 min read</span>
-          </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
